@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "StyreneA", system-ui, sans-serif;
+    src:
+      url("/public/fonts/StyreneA-Regular.woff2") format("woff2"),
+      url("/public/fonts/StyreneA-Regular.woff") format("woff"),
+      url("/public/fonts/StyreneA-Regular.ttf") format("truetype");
+  }
+}
