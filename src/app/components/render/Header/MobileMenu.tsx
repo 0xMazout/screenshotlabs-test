@@ -22,7 +22,7 @@ type Props = {
   lines: React.JSX.Element[];
 };
 
-export function MobileMenu(props: Props) {
+const MobileMenu = (props: Props) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -44,6 +44,6 @@ export function MobileMenu(props: Props) {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};
 
 export default MobileMenu;

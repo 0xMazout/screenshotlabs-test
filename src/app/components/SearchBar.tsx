@@ -30,7 +30,7 @@ function useDebounce(value: unknown, delay: number) {
 
 const SearchBar: FC<IFormProps> = ({ itemID }) => {
   const [searchValue, setSearchValue] = useState("");
-  const debouncedSearchValue = useDebounce(searchValue, 500);
+  const debouncedSearchValue = useDebounce(searchValue, 300);
 
   useEffect(() => {
     if (debouncedSearchValue) {

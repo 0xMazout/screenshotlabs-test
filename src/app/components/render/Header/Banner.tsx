@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-type Props = { src: string; alt: string };
+type Props = { src: StaticImageData; alt: string };
 
-const Banner = (props: Props) => {
+const Banner = ({ src, alt }: Props) => {
   return (
     <>
-      <Image className="w-full" src={""} alt={""} />
+      <Image className="w-full" src={src} alt={alt} />
     </>
   );
 };
