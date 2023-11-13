@@ -1,8 +1,8 @@
 import React from "react";
-import Navigation from "@/components/render/Header/Navigation";
-import LogoTitle from "@/components/render/Header/LogoTitle";
-import ThemeSwitch from "@/components/render/Header/ThemeSwitch";
-import SearchBar from "@/components/SearchBar";
+import Navigation from "@/components/presentationals/Header/Navigation";
+import LogoTitle from "@/components/presentationals/Header/LogoTitle";
+import ThemeSwitch from "@/components/presentationals/Header/ThemeSwitch";
+import SearchBar from "@/components/presentationals/globals/SearchBar";
 import { Button } from "@/components/ui/button";
 // Split en 4 éléments.
 // Logo title , navigation, search bar, walletconnect+logo buy

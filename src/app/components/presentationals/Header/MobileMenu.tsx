@@ -15,7 +15,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import SearchBar from "../../SearchBar";
+import SearchBar from "../globals/SearchBar";
 import ThemeSwitcher from "./ThemeSwitch";
 
 type Props = {

@@ -7,7 +7,7 @@ const LogoTitleAuthor = (props: Props) => {
   return (
     <div className="flex content-center">
       <Image src={arkIcon} alt={"logoIcon"} />
-      <h1 className="align-middle font-styreneA">ArkMArket</h1>
+      <h1 className="font-styreneA">ArkMArket</h1>
     </div>
   );
 };
