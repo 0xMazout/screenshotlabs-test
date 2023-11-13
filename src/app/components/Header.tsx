@@ -16,14 +16,16 @@ const Header = () => {
 
   return (
     <header>
-      <section className="flex items-center justify-between gap-16 p-5 dark:bg-black">
+      <section className="flex items-center justify-between p-5 dark:bg-black">
         <LogoTitle />
         <Navigation arrayLinks={arrayLinks} />
         <SearchBar itemID="searchHeader" />
-        <Button variant="outline" size="sm">
-          Connect Wallet
-        </Button>
-        <ThemeSwitch itemID="themeSwitcherHeader" />
+        <div className=" flex items-center">
+          <Button variant="outline" size="sm">
+            Connect Wallet
+          </Button>
+          <ThemeSwitch itemID="themeSwitcherHeader" />
+        </div>
       </section>
     </header>
   );

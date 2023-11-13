@@ -48,7 +48,7 @@ const SearchBar: FC<IFormProps> = ({ itemID }) => {
     <form
       className={cn(
         `flex gap-1 rounded-lg border p-2 hover:border-s-4 dark:bg-blackblue-600 ${
-          itemID == "searchHeader" && "max-md:hidden"
+          itemID == "searchHeader" && "max-[860px]:hidden"
         }`,
       )}
     >

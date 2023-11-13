@@ -26,8 +26,8 @@ const Navigation = ({ arrayLinks }: Props) => {
 
   return (
     <nav>
-      <ul className="flex justify-between gap-3 max-md:hidden">{lines}</ul>
-      <ul className="flex md:hidden">{mobileMenu()}</ul>
+      <ul className="flex justify-between gap-3 max-[860px]:hidden">{lines}</ul>
+      <ul className="flex min-[860px]:hidden">{mobileMenu()}</ul>
     </nav>
   );
 };

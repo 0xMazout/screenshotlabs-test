@@ -5,9 +5,9 @@ type Props = {};
 
 const LogoTitle = (props: Props) => {
   return (
-    <div className="flex content-center">
+    <div className="flex items-center">
       <Image src={arkIcon} alt={"logoIcon"} />
-      <h1 className="align-middle font-styreneA">ArkMArket</h1>
+      <h1 className="p-1 align-middle font-styreneA">ArkMArket</h1>
     </div>
   );
 };

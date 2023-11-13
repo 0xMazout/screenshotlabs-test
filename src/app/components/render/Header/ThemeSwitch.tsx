@@ -12,7 +12,7 @@ const ThemeSwitcher: FC<IButtonProps> = ({ itemID }) => {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const setVisibility = () => {
-    return cn(itemID == "themeSwitcherHeader" && "max-md:hidden");
+    return cn(itemID == "themeSwitcherHeader" && "max-[860px]:hidden");
   };
 
   const renderThemeChanger = () => {

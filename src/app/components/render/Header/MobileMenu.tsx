@@ -26,7 +26,7 @@ const MobileMenu = (props: Props) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant="outline">Menu</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-full">
         {/* <DropdownMenuLabel>Menu</DropdownMenuLabel> */}
