@@ -7,9 +7,10 @@ export const fetchNFTsForCollection = async (
   const limitAttr = limit && `&limit=${limit}`;
   const slugAttr = slug && `&slug=${slug}`;
   try {
-    return fetch(
+    const res = await fetch(
       `https://eth-mainnet.g.alchemy.com/nft/v2/${process.env.ALCHEMY_API_KEY}/getNFTsForCollection?contractAddress=${collectionContractAddress}&withMetadata=${withMetadata}${limitAttr}${slugAttr}`,
-    ).then((response) => response.json());
+    );
+    return res.json();
   } catch (error) {
     console.log(error);
   }

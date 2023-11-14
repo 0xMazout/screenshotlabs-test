@@ -1,34 +1,11 @@
 "use client";
-import React, {
-  useState,
-  useEffect,
-  FC,
-  InputHTMLAttributes,
-  FormHTMLAttributes,
-} from "react";
-import Image from "next/image";
-
+import React, { useState, useEffect, FC } from "react";
+import { useDebounce } from "@/hooks/useDebounce";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { cn } from "@/lib/utils";
 import { IFormProps } from "@/interfaces/IProps";
-// Hook personnalisé pour débouncer une valeur
-function useDebounce(value: unknown, delay: number) {
-  const [debouncedValue, setDebouncedValue] = useState(value);
 
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-}
-
-const SearchBar: FC<IFormProps> = ({ itemID }) => {
+const SearchBar = ({ itemID }: IFormProps) => {
   const [searchValue, setSearchValue] = useState("");
   const debouncedSearchValue = useDebounce(searchValue, 300);
 

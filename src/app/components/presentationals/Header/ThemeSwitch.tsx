@@ -6,9 +6,9 @@ import { MoonIcon } from "@heroicons/react/24/solid";
 import { Button } from "@/components/ui/button";
 import { IButtonProps } from "@/interfaces/IProps";
 import { FC } from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "@/lib/utils";
 
-const ThemeSwitcher: FC<IButtonProps> = ({ itemID }) => {
+const ThemeSwitcher = ({ itemID }: IButtonProps) => {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const setVisibility = () => {
