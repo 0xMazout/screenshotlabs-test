@@ -20,7 +20,7 @@ const Header = () => {
         <LogoTitle />
         <Navigation arrayLinks={arrayLinks} />
         <SearchBar itemID="searchHeader" />
-        <div className=" flex items-center">
+        <div className=" flex items-center gap-1">
           <Button variant="outline" size="sm">
             Connect Wallet
           </Button>

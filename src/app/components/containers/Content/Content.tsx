@@ -1,13 +1,13 @@
 import React from "react";
-import BottomContent from "./BottomContent";
-import TopContent from "./TopContent";
+import BottomContent from "@/components/containers/Content/BottomContent";
+import TopContentContainer from "@/components/containers/Content/TopContentContainer";
 type Props = {};
 
 const Content = (props: Props) => {
   return (
     <section>
       <div>
-        <TopContent />
+        <TopContentContainer />
         <BottomContent />
       </div>
     </section>
