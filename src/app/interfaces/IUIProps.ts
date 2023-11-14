@@ -6,3 +6,8 @@ export interface ITileProps {
   icon?: StaticImageData;
   unit?: string;
 }
+
+export interface IArrayLinks {
+  name: string;
+  link: string;
+}

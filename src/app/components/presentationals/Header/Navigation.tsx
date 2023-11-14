@@ -2,16 +2,17 @@ import Link from "next/link";
 import React from "react";
 import MobileMenu from "./MobileMenu";
 import NavigationLine from "./NavigationLine";
+import { IArrayLinks } from "@/interfaces/IUIProps";
 type Props = {
-  arrayLinks: Array<{ name: string; href: string }>;
+  arrayLinks: IArrayLinks[];
 };
 
 const Navigation = ({ arrayLinks }: Props) => {
-  const lineBuilder = (arrayLinks: Array<{ name: string; href: string }>) => {
+  const lineBuilder = (arrayLinks: IArrayLinks[]) => {
     return arrayLinks.map((link, index) => {
       return (
         <NavigationLine
-          link={link.href}
+          link={link.link}
           name={link.name}
           index={index}
           key={index}

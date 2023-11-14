@@ -7,6 +7,7 @@ type Props = {};
  * The display of Nfts
  * The filters */
 const BottomContentContainer = (props: Props) => {
+  const mockArrayLinks = {};
   return <div>BottomContent</div>;
 };
 
