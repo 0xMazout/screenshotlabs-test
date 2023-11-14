@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { ITileProps } from "@/interfaces/IUIProps";
 import GridStats from "@/components/containers/Content/GridStats";
-import LogoTitleAuthor from "@/components/presentationals/Content/LogoTitleAuthor";
-import { cn } from "../../../lib/utils";
-import { Button } from "../../ui/button";
+import LogoTitleAuthor from "@/components/presentationals/Content/TopContent/LogoTitleAuthor";
+import { cn } from "../../../../lib/utils";
+import { Button } from "../../../ui/button";
 import Description from "./Description";
 
 type Props = {

@@ -1,5 +1,5 @@
 import React from "react";
-import BottomContent from "@/components/containers/Content/BottomContent";
+import BottomContent from "@/components/containers/Content/BottomContentContainer";
 import TopContentContainer from "@/components/containers/Content/TopContentContainer";
 type Props = {};
 

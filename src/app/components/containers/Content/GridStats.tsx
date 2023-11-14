@@ -1,5 +1,5 @@
 import React from "react";
-import TileStat from "@/components/presentationals/Content/TileStat";
+import TileStat from "@/components/presentationals/Content/TopContent/TileStat";
 import { ITileProps } from "@/interfaces/IUIProps";
 type Props = {
   tileArray: ITileProps[];

@@ -4,7 +4,7 @@ import { StaticImageData } from "next/image";
 import { fetchContractMetadata } from "@/api/getContractMetadata";
 import { ITileProps } from "@/interfaces/IUIProps";
 import { ContractMetadata, ContractMetadataClass } from "@/interfaces/IAPI";
-import TopContent from "../../presentationals/Content/TopContent";
+import TopContent from "../../presentationals/Content/TopContent/TopContent";
 type Props = {};
 
 const TopContentContainer = async (props: Props) => {
