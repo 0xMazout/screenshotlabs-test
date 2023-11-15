@@ -1,5 +1,5 @@
 import React from "react";
-import Tabs from "@/components/presentationals/Content/BottomContent/Tabs";
+import Tabs from "@/components/presentationals/Content/BottomContent/NavigationTabsContent";
 
 type Props = {
   arrayLinks: Array<{ name: string; value: string }>;

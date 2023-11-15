@@ -10,8 +10,8 @@ type Props = {
 
 const Description = ({ description, isShowMore, handleOnClick }: Props) => {
   return (
-    <div className={cn("flex items-center")}>
-      <p className={cn(!isShowMore && `h-6 overflow-clip`, "flex ")}>
+    <div className={cn("flex items-center max-sm:flex-col ")}>
+      <p className={cn(!isShowMore && `h-6 overflow-clip`, "flex")}>
         {description}
       </p>
       <p>{!isShowMore && "..."}</p>
