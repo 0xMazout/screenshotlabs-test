@@ -10,7 +10,7 @@ type Props = {
 const NavigationTabsContent = ({ arrayLinks }: Props) => {
   return (
     <nav>
-      <Tabs defaultValue="account" className="w-[400px]">
+      <Tabs defaultValue={arrayLinks[0].name} className="w-[400px]">
         <TabsList className="bg-transparent">
           {arrayLinks.map((link, index) => {
             return (

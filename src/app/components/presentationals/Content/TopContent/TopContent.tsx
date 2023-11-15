@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { ITileProps } from "@/interfaces/IUIProps";
 import GridStats from "@/components/containers/Content/GridStats";
 import LogoTitleAuthor from "@/components/presentationals/Content/TopContent/LogoTitleAuthor";
-import { cn } from "../../../../lib/utils";
-import { Button } from "../../../ui/button";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import Description from "./Description";
 import { StaticImageData } from "next/image";
 
@@ -28,7 +28,7 @@ const TopContent = ({
   const [isShowMore, setShowMore] = useState(showMore);
 
   return (
-    <section className="flex justify-between p-3 max-md:flex-col">
+    <section className="flex justify-between p-3 max-lg:flex-col">
       <div className="flex max-w-2xl flex-col gap-2">
         <LogoTitleAuthor name={name} author={author} image={collectionImage} />
         <Description

@@ -1,3 +1,9 @@
+/**The goal is to store some settings on UI like:
+ * Sorting on price
+ * is Filter Card displayed or not
+ * isGridCard display or ListCard display
+ */
+
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import type {} from "@redux-devtools/extension"; // required for devtools typing
@@ -13,7 +19,7 @@ interface FilterState {
   updateFilters: (state: FilterValues) => void;
 }
 /** For Now it's unused because i'm in a rush but the idea was to share filters settings through the store */
-export const useFilterStore = create<FilterState>()(
+export const useUIStore = create<FilterState>()(
   devtools(
     persist(
       (set) => ({

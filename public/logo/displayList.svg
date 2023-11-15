@@ -1,0 +1,25 @@
+<svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ArkIcons_small">
+<g id="Rectangle 5593">
+<mask id="path-1-inside-1_0_444" fill="white">
+<rect x="1.5625" y="19.25" width="3.125" height="3.125" rx="0.78125"/>
+</mask>
+<rect x="1.5625" y="19.25" width="3.125" height="3.125" rx="0.78125" fill="white" stroke="white" stroke-width="3.125" mask="url(#path-1-inside-1_0_444)"/>
+</g>
+<g id="Rectangle 5594">
+<mask id="path-2-inside-2_0_444" fill="white">
+<rect x="1.5625" y="11.4375" width="3.125" height="3.125" rx="0.78125"/>
+</mask>
+<rect x="1.5625" y="11.4375" width="3.125" height="3.125" rx="0.78125" fill="white" stroke="white" stroke-width="3.125" mask="url(#path-2-inside-2_0_444)"/>
+</g>
+<g id="Rectangle 5595">
+<mask id="path-3-inside-3_0_444" fill="white">
+<rect x="1.5625" y="3.625" width="3.125" height="3.125" rx="0.78125"/>
+</mask>
+<rect x="1.5625" y="3.625" width="3.125" height="3.125" rx="0.78125" fill="white" stroke="white" stroke-width="3.125" mask="url(#path-3-inside-3_0_444)"/>
+</g>
+<path id="Line 587" d="M7.8125 5.1875H22.6562" stroke="white" stroke-width="1.5625" stroke-linecap="round"/>
+<path id="Line 588" d="M7.8125 13H22.6562" stroke="white" stroke-width="1.5625" stroke-linecap="round"/>
+<path id="Line 589" d="M7.8125 20.8125H22.6562" stroke="white" stroke-width="1.5625" stroke-linecap="round"/>
+</g>
+</svg>

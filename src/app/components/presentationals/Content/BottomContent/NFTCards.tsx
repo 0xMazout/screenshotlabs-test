@@ -20,7 +20,7 @@ const NFTCards = ({ image, name, id, price, isSelling }: Props) => {
       <h3 className="p-1">{price} ETH</h3>
       {!isSelling && (
         <Button
-          className="mt-1 w-full bg-red-600 hover:bg-red-400"
+          className="mt-1 w-full bg-red-500 font-bold hover:bg-red-400 dark:text-darkblue-500"
           variant={"destructive"}
         >
           Buy Now

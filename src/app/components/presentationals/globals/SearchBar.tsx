@@ -24,7 +24,7 @@ const SearchBar = ({ itemID }: IFormProps) => {
   return (
     <form
       className={cn(
-        `flex gap-1 rounded-lg border p-2 hover:border-s-4 dark:bg-darkblue-600 ${
+        `flex gap-1 rounded-lg border p-2 hover:border-s-4 dark:bg-darkblue-500 ${
           itemID == "searchHeader" && "max-[860px]:hidden"
         }`,
       )}

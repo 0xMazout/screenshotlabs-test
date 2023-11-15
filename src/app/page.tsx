@@ -9,9 +9,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Banner src={banner} alt="banner picture" />
-      <Content />
-      <main></main>
+      <main>
+        <Banner src={banner} alt="banner picture" />
+        <Content />
+      </main>
       <Footer />
     </>
   );
