@@ -8,24 +8,18 @@ import { cn } from "@/lib/utils";
 type Props = {
   status: string;
   updateStatus: (status: string) => void;
-  priceMax: string;
-  updatePriceMax: (priceMax: string) => void;
-  marketplaces: string;
-  updateMarketplaces: (marketplaces: string) => void;
   collapsibleMenuPrice: JSX.Element;
   collapsibleMenuMarketplace: JSX.Element;
   collapsibleMenuProperties: JSX.Element;
+  statusButton: JSX.Element;
 };
 
 const FilterCard = ({
-  marketplaces,
-  priceMax,
   status,
   collapsibleMenuMarketplace,
   collapsibleMenuPrice,
   collapsibleMenuProperties,
-  updateMarketplaces,
-  updatePriceMax,
+  statusButton,
   updateStatus,
 }: Props) => {
   return (

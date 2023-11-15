@@ -4,7 +4,7 @@ import type {} from "@redux-devtools/extension"; // required for devtools typing
 
 type FilterValues = {
   status: string;
-  priceMax: number;
+  priceMax: string;
   marketplaces: string;
 };
 
@@ -18,9 +18,9 @@ export const useFilterStore = create<FilterState>()(
     persist(
       (set) => ({
         filters: {
-          status: "all",
-          priceMax: 0.1,
-          marketplaces: "all",
+          status: "All",
+          priceMax: "All",
+          marketplaces: "All",
         },
         updateFilters: (by) =>
           set((state) => ({

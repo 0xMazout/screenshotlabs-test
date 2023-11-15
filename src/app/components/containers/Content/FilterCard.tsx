@@ -3,8 +3,10 @@
 import React, { use, useContext, useEffect, useState } from "react";
 import { useFilterStore } from "@/stores/filterStore";
 import FilterCard from "@/components/presentationals/Content/BottomContent/FilterCard";
-import { Combobox } from "../../presentationals/globals/ComboBox";
-import RadioMultipleSelect from "../../presentationals/globals/RadioMultipleSelect";
+import { Combobox } from "@/components/presentationals/globals/ComboBox";
+import RadioMultipleSelect from "@/components/presentationals/globals/RadioMultipleSelect";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 type Props = {};
 
 /** This container will prepare Data after receive filter  */
@@ -17,35 +19,34 @@ const FilterCardContainer = (props: Props) => {
   const buildPriceMenu = () => {
     const arrayData = [
       {
-        name: "All",
         value: "All",
         label: "All",
       },
       {
-        name: "0.1",
-        value: "-0.1 ETH",
+        value: "0.1",
         label: "less than 0.1 ETH",
       },
       {
-        name: "0.2",
-        value: "-0.2 ETH",
+        value: "0.2",
         label: "less than 0.2 ETH",
       },
       {
-        name: "0.5",
-        value: "-0.5 ETH",
+        value: "0.5 ETH",
         label: "less than 0.5 ETH",
       },
       {
-        name: "1",
-        value: "-1 ETH",
+        value: "1",
         label: "less than 1 ETH",
       },
     ];
 
     return (
       <div>
-        <RadioMultipleSelect arrayData={arrayData} defaultValue="All" />
+        <RadioMultipleSelect
+          arrayData={arrayData}
+          defaultValue="All"
+          setValueSelected={(prev) => setPriceMax(prev)}
+        />
       </div>
     );
   };
@@ -53,24 +54,25 @@ const FilterCardContainer = (props: Props) => {
   const buildMarketplaceMenu = () => {
     const arrayData = [
       {
-        name: "all",
-        value: "all",
+        value: "All",
         label: "All",
       },
       {
-        name: "opensea",
         value: "opensea",
         label: "OpenSea",
       },
       {
-        name: "rarible",
         value: "rarible",
         label: "Rarible",
       },
     ];
     return (
       <div>
-        <RadioMultipleSelect arrayData={arrayData} defaultValue="all" />
+        <RadioMultipleSelect
+          arrayData={arrayData}
+          defaultValue="All"
+          setValueSelected={(prev) => setMarketplaces(prev)}
+        />
       </div>
     );
   };
@@ -197,6 +199,35 @@ const FilterCardContainer = (props: Props) => {
     return <div className="justify-evenly gap-36">{res}</div>;
   };
 
+  const buildStatusButton = () => {
+    return (
+      <>
+        <Button
+          className={cn(
+            status == "All"
+              ? "bg-white"
+              : "bg-black text-white hover:bg-white hover:text-black",
+            "font-styreneA font-bold",
+          )}
+          onClick={() => setStatus("All")}
+        >
+          All
+        </Button>
+        <Button
+          className={cn(
+            status == "Buy now"
+              ? "bg-white"
+              : "bg-black text-white hover:bg-white hover:text-black",
+            "font-styreneA font-bold",
+          )}
+          onClick={() => setStatus("Buy now")}
+        >
+          Buy now
+        </Button>
+      </>
+    );
+  };
+
   return (
     <div>
       <FilterCard
@@ -204,15 +235,10 @@ const FilterCardContainer = (props: Props) => {
         updateStatus={(prev) => {
           setStatus(() => prev);
         }}
-        priceMax={priceMax}
-        updatePriceMax={(prev) => setPriceMax(() => prev)}
-        marketplaces={marketplaces}
-        updateMarketplaces={(prev) => {
-          setMarketplaces(() => prev);
-        }}
         collapsibleMenuPrice={buildPriceMenu()}
         collapsibleMenuMarketplace={buildMarketplaceMenu()}
         collapsibleMenuProperties={buildPropertiesMenu()}
+        statusButton={buildStatusButton()}
       />
     </div>
   );
