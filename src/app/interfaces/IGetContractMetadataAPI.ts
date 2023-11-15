@@ -1,3 +1,4 @@
+/**Contract Meta Data API Result Types */
 export interface ContractMetadata {
   address: string;
   contractMetadata: ContractMetadataClass;
@@ -26,3 +27,6 @@ export interface OpenSea {
   bannerImageUrl: string;
   lastIngestedAt: Date;
 }
+/**Contract Meta Data API Result Types END */
+
+/** Contract GetCollections NFT API */

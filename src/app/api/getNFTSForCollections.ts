@@ -1,5 +1,5 @@
 export const fetchNFTsForCollection = async (
-  collectionContractAddress: string,
+  collectionContractAddress: string | undefined,
   withMetadata: boolean,
   slug?: string,
   limit?: number,

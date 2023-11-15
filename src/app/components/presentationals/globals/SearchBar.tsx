@@ -24,7 +24,7 @@ const SearchBar = ({ itemID }: IFormProps) => {
   return (
     <form
       className={cn(
-        `flex gap-1 rounded-lg border p-2 hover:border-s-4 dark:bg-blackblue-600 ${
+        `flex gap-1 rounded-lg border p-2 hover:border-s-4 dark:bg-darkblue-600 ${
           itemID == "searchHeader" && "max-[860px]:hidden"
         }`,
       )}
@@ -35,7 +35,7 @@ const SearchBar = ({ itemID }: IFormProps) => {
         value={searchValue}
         onChange={handleInputChange}
         placeholder="Search Nft, collections and more"
-        className="w-max-fit w-64 bg-transparent text-black placeholder:text-black focus:outline-none dark:text-grayblue-300 dark:placeholder:text-grayblue-300"
+        className="w-max-fit w-64 bg-transparent text-black placeholder:text-black focus:outline-none dark:text-spaceblue-400 dark:placeholder:text-spaceblue-400"
       />
     </form>
   );

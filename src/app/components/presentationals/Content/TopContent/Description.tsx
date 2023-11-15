@@ -19,7 +19,7 @@ const Description = ({ description, isShowMore, handleOnClick }: Props) => {
         variant={"ghost"}
         onClick={handleOnClick}
         className="
-       text-blue-400 hover:bg-transparent "
+        text-spaceblue-500 hover:bg-transparent dark:text-spaceblue-400 "
       >
         {!isShowMore ? "Show More" : "Show Less"}
       </Button>

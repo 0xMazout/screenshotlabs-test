@@ -3,8 +3,8 @@ import ethOutlined from "@public/icons/ethoutlined.svg";
 import { StaticImageData } from "next/image";
 import { fetchContractMetadata } from "@/api/getContractMetadata";
 import { ITileProps } from "@/interfaces/IUIProps";
-import { ContractMetadata, ContractMetadataClass } from "@/interfaces/IAPI";
-import TopContent from "../../presentationals/Content/TopContent/TopContent";
+import { ContractMetadata } from "@/interfaces/IGetContractMetadataAPI";
+import TopContent from "@/components/presentationals/Content/TopContent/TopContent";
 type Props = {};
 
 const TopContentContainer = async (props: Props) => {
@@ -42,7 +42,7 @@ const TopContentContainer = async (props: Props) => {
     return res;
   };
 
-  const getMetataDatacontent = async () => {
+  const populateData = async () => {
     const dataFromMetadata: ITileProps[] = [];
     const res = await fetchMetadata();
     dataFromMetadata.push({
@@ -61,13 +61,19 @@ const TopContentContainer = async (props: Props) => {
     return data;
   };
 
+  const populateCollectionImage = async () => {
+    const res = await fetchMetadata();
+    return res.contractMetadata.openSea.imageUrl;
+  };
+
   return (
     <TopContent
       name={"Everai Duos"}
       author={"Screenshot Labs"}
-      tileArray={await getMetataDatacontent()}
+      tileArray={await populateData()}
       description={mockDescription}
       showMore={false}
+      collectionImage={await populateCollectionImage()}
     />
   );
 };

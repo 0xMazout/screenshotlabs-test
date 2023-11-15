@@ -11,3 +11,10 @@ export interface IArrayLinks {
   name: string;
   link: string;
 }
+
+export interface INFTGridCardsProps {
+  title: string;
+  id: string;
+  image: StaticImageData;
+  price: string;
+}

@@ -6,6 +6,7 @@ import LogoTitleAuthor from "@/components/presentationals/Content/TopContent/Log
 import { cn } from "../../../../lib/utils";
 import { Button } from "../../../ui/button";
 import Description from "./Description";
+import { StaticImageData } from "next/image";
 
 type Props = {
   name: string;
@@ -13,6 +14,7 @@ type Props = {
   tileArray: ITileProps[];
   description: string;
   showMore: boolean;
+  collectionImage: string;
 };
 
 const TopContent = ({
@@ -21,13 +23,14 @@ const TopContent = ({
   tileArray,
   description,
   showMore,
+  collectionImage,
 }: Props) => {
   const [isShowMore, setShowMore] = useState(showMore);
 
   return (
     <section className="flex justify-between p-3 max-md:flex-col">
-      <div className="flex max-w-lg flex-col gap-2">
-        <LogoTitleAuthor name={name} author={author} />
+      <div className="flex max-w-2xl flex-col gap-2">
+        <LogoTitleAuthor name={name} author={author} image={collectionImage} />
         <Description
           description={description}
           isShowMore={isShowMore}

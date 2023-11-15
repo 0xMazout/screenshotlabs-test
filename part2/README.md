@@ -25,3 +25,9 @@ I had to mock some datas :
 - The fonts on the right top corner of Content:
 - Volume, Royalties , Best Offer and Owners where not available from Alchemy API NFT (in my knowledge)
 - I've skipped the show more on the description (For now if i've time i will implement it) we can limit this with a simple css property overflow
+
+-- About the Data filtering:
+
+I had to fake some behavior:
+
+On the filter card i didn't spent time on filter. I've just made a fake behavior to show the filter card and hide it when you click on the filter button again. You can Selects differents filter but it's not updating the content.
