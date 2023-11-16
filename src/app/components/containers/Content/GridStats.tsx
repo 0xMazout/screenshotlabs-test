@@ -8,7 +8,7 @@ type Props = {
 const GridStats = ({ tileArray }: Props) => {
   const generateTileStats = () => {
     return (
-      <div className="grid auto-cols-auto grid-flow-col-dense grid-rows-2 gap-2">
+      <div className="grid auto-cols-auto grid-flow-col-dense grid-rows-2 gap-2 max-md:w-full">
         {tileArray.map((tile, index) => {
           return <TileStat key={index} {...tile} />;
         })}

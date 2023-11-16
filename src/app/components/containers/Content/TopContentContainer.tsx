@@ -37,7 +37,7 @@ const TopContentContainer = async (props: Props) => {
 
   const fetchMetadata = async () => {
     const res: ContractMetadata = await fetchContractMetadata(
-      process.env.EVERAI_CONTRACT_ADDRESS,
+      process.env.NEXT_PUBLIC_EVERAI_CONTRACT_ADDRESS,
     );
     return res;
   };

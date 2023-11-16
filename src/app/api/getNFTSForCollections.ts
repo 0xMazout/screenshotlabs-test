@@ -1,14 +1,15 @@
 export const fetchNFTsForCollection = async (
   collectionContractAddress: string | undefined,
   withMetadata: boolean,
-  slug?: string,
   limit?: number,
+  startToken?: string,
 ) => {
-  const limitAttr = limit && `&limit=${limit}`;
-  const slugAttr = slug && `&slug=${slug}`;
+  const limitAttr = limit ? `&limit=${limit}` : ``;
+
+  const startTokenAttr = startToken?.length ? `&startToken=${startToken}` : ``;
   try {
     const res = await fetch(
-      `https://eth-mainnet.g.alchemy.com/nft/v2/${process.env.ALCHEMY_API_KEY}/getNFTsForCollection?contractAddress=${collectionContractAddress}&withMetadata=${withMetadata}${limitAttr}${slugAttr}`,
+      `https://eth-mainnet.g.alchemy.com/nft/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}/getNFTsForCollection?contractAddress=${collectionContractAddress}&withMetadata=${withMetadata}${limitAttr}${startTokenAttr}`,
     );
     return res.json();
   } catch (error) {

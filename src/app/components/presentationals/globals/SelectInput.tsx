@@ -14,10 +14,10 @@ type Props = {
 const SelectInput = ({ name }: Props) => {
   return (
     <Select>
-      <SelectTrigger className="w-[180px] bg-darkblue-500">
+      <SelectTrigger className="text-dark align-center flex gap-1 bg-red-500 p-3 font-bold hover:bg-red-400 dark:bg-darkblue-500  dark:text-white  dark:hover:bg-spaceblue-800">
         <SelectValue placeholder={name[0]} />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="text-dark align-center flex gap-1 bg-red-500 p-3 font-bold hover:bg-red-400 dark:bg-darkblue-500  dark:text-white dark:hover:bg-spaceblue-800">
         {name.map((item, index) => {
           return (
             <SelectItem key={index} value={item}>

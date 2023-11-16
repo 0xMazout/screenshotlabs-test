@@ -7,11 +7,12 @@ import { Combobox } from "@/components/presentationals/globals/ComboBox";
 import RadioMultipleSelect from "@/components/presentationals/globals/RadioMultipleSelect";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Pagination from "@/components/presentationals/globals/Pagination";
+
 type Props = {};
 
 /** This container will prepare Data after receive filter  */
 const FilterCardContainer = (props: Props) => {
-  // const context = useFilterStore();
   const [status, setStatus] = useState("All");
   const [priceMax, setPriceMax] = useState("All");
   const [marketplaces, setMarketplaces] = useState("All");
@@ -195,7 +196,6 @@ const FilterCardContainer = (props: Props) => {
         );
       },
     );
-    /** This won't be faked we are going to search through each trait_type each type should have a combo box */
     return <div className="justify-evenly gap-36">{res}</div>;
   };
 
@@ -205,8 +205,8 @@ const FilterCardContainer = (props: Props) => {
         <Button
           className={cn(
             status == "All"
-              ? "bg-white"
-              : "bg-black text-white hover:bg-white hover:text-black",
+              ? "bg-red-500 text-black  hover:bg-red-500  dark:bg-white dark:text-black "
+              : "bg-black hover:bg-red-500  hover:text-black dark:bg-black dark:text-white dark:hover:bg-white dark:hover:text-black",
             "font-styreneA font-bold",
           )}
           onClick={() => setStatus("All")}
@@ -216,8 +216,8 @@ const FilterCardContainer = (props: Props) => {
         <Button
           className={cn(
             status == "Buy now"
-              ? "bg-white"
-              : "bg-black text-white hover:bg-white hover:text-black",
+              ? "bg-red-500 text-black  hover:bg-red-500  dark:bg-white dark:text-black "
+              : "bg-black hover:bg-red-500  hover:text-black dark:bg-black dark:text-white dark:hover:bg-white dark:hover:text-black",
             "font-styreneA font-bold",
           )}
           onClick={() => setStatus("Buy now")}
@@ -229,7 +229,7 @@ const FilterCardContainer = (props: Props) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col">
       <FilterCard
         status={status}
         updateStatus={(prev) => {
@@ -240,6 +240,9 @@ const FilterCardContainer = (props: Props) => {
         collapsibleMenuProperties={buildPropertiesMenu()}
         statusButton={buildStatusButton()}
       />
+      <div className="mt-2">
+        <Pagination />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
     // domains: ["i.seadn.io"],
@@ -9,6 +10,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "i.seadn.io",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "everai-collection-*",
         pathname: "**",
       },
     ],

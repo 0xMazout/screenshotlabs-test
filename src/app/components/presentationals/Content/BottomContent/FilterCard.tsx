@@ -15,44 +15,19 @@ type Props = {
 };
 
 const FilterCard = ({
-  status,
   collapsibleMenuMarketplace,
   collapsibleMenuPrice,
   collapsibleMenuProperties,
   statusButton,
-  updateStatus,
 }: Props) => {
   return (
-    <div className=" h-auto w-60 rounded-lg bg-slate-300 p-3 dark:bg-darkblue-500 max-md:mx-auto">
+    <div className=" h-fit w-60 rounded-lg bg-slate-300 p-3 dark:bg-darkblue-500 max-md:mx-auto">
       <h2 className="my-1 text-center font-styreneA font-bold md:hidden ">
         Filters
       </h2>
-      <hr className="my-2" />
+      <hr className="my-2  md:hidden" />
       <h2 className="my-1 font-styreneA font-bold ">Status</h2>
-      <div className="flex gap-2 max-md:justify-between">
-        <Button
-          className={cn(
-            status == "All"
-              ? "bg-white"
-              : "bg-black text-white hover:bg-white hover:text-black",
-            "font-styreneA font-bold",
-          )}
-          onClick={() => updateStatus("All")}
-        >
-          All
-        </Button>
-        <Button
-          className={cn(
-            status == "Buy now"
-              ? "bg-white"
-              : "bg-black text-white hover:bg-white hover:text-black",
-            "font-styreneA font-bold",
-          )}
-          onClick={() => updateStatus("Buy now")}
-        >
-          Buy now
-        </Button>
-      </div>
+      <div className="flex gap-2 max-md:justify-between">{statusButton}</div>
       <hr className="my-2" />
       <CollapsibleMenu name={"Price"} content={collapsibleMenuPrice} />
       <hr className="my-2" />

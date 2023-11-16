@@ -20,12 +20,22 @@ const Header = () => {
       <section className="flex items-center justify-between p-5 dark:bg-black">
         <LogoTitle />
         <Navigation arrayLinks={arrayLinks} />
-        <SearchBar itemID="searchHeader" />
+        <SearchBar
+          itemID="searchHeader"
+          placeholder="Search NFT, collections"
+        />
         <div className=" flex items-center gap-1">
-          <Button variant="outline" size="sm">
+          <Button
+            className="bg-red-500 font-bold hover:bg-red-400 dark:bg-darkblue-500 dark:hover:bg-spaceblue-800"
+            variant="outline"
+            size="sm"
+          >
             Connect Wallet
           </Button>
-          <ThemeSwitch itemID="themeSwitcherHeader" />
+          <ThemeSwitch
+            className="bg-red-500 font-bold hover:bg-red-400 dark:bg-darkblue-500 dark:hover:bg-spaceblue-800"
+            itemID="themeSwitcherHeader"
+          />
         </div>
       </section>
     </header>
