@@ -8,13 +8,15 @@ const Pagination = () => {
     IncreaseFirstItemToQuery,
     firstItemToQuery,
   } = useSearchStore();
-  const { UpdatefetchAPI } = useSearchStore();
+  const { UpdatefetchAPI, updateSearch } = useSearchStore();
   const handleNext = () => {
     IncreaseFirstItemToQuery();
     UpdatefetchAPI(true);
+    updateSearch("");
   };
   const handlePrev = () => {
     UpdatefetchAPI(true);
+    updateSearch("");
     DecreaseFirstItemToQuery();
   };
 

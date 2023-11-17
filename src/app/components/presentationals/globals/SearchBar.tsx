@@ -5,7 +5,12 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { cn } from "@/lib/utils";
 import { IFormProps } from "@/interfaces/IProps";
 import { useSearchStore } from "@/stores/searchStore";
-const SearchBar = ({ itemID, isContent, placeholder }: IFormProps) => {
+const SearchBar = ({
+  itemID,
+  isContent,
+  placeholder,
+  itemType,
+}: IFormProps) => {
   const [searchValue, setSearchValue] = useState("");
   const debouncedSearchValue = useDebounce(searchValue, 600);
   const { updateSearch, search } = useSearchStore();
@@ -20,31 +25,25 @@ const SearchBar = ({ itemID, isContent, placeholder }: IFormProps) => {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedSearchValue]);
+  }, [debouncedSearchValue, search]);
 
   const handleInputChange = (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
     setSearchValue(event.target.value);
-    console.log("searchValue :", searchValue);
-    // To only search on the content Bar, the other SearchBar is not for the NFTS , more for other collections
-    // if (isContent) {
-    //   updateSearch(event.target.value.toString());
-    // }
-    console.log("event target :", event.target.value.toString());
   };
 
   return (
     <form
       className={cn(
-        `flex gap-1 rounded-lg border p-2 hover:border-s-4 dark:bg-darkblue-500 ${
+        `flex gap-1 rounded-lg border p-2  dark:bg-darkblue-500 ${
           itemID == "searchHeader" && "max-[860px]:hidden"
         }`,
       )}
     >
       <MagnifyingGlassIcon className="h-6 w-6 dark:stroke-white" />
       <input
-        type="text"
+        type={itemType ? itemType : "text"}
         value={searchValue}
         onChange={handleInputChange}
         placeholder={placeholder}

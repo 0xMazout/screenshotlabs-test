@@ -26,9 +26,19 @@ export const useSearchStore = create<{
         updateSearch: (by) => set(() => ({ search: by })),
         firstItemToQuery: 0,
         DecreaseFirstItemToQuery: () =>
-          set((state) => ({ firstItemToQuery: state.firstItemToQuery - 100 })),
+          set((state) => ({
+            firstItemToQuery:
+              state.firstItemToQuery >= 100
+                ? state.firstItemToQuery - 100
+                : state.firstItemToQuery,
+          })),
         IncreaseFirstItemToQuery: () =>
-          set((state) => ({ firstItemToQuery: state.firstItemToQuery + 100 })),
+          set((state) => ({
+            firstItemToQuery:
+              state.firstItemToQuery >= 0
+                ? state.firstItemToQuery + 100
+                : state.firstItemToQuery,
+          })),
         UpdatefetchAPI: (by) => {
           set((state) => ({
             isFetchAPINeeded: by,

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import NavigationTabsContent from "@/components/presentationals/Content/BottomContent/NavigationTabsContent";
 import { IArrayLinks } from "@/interfaces/IUIProps";
 import GridCards from "@/components/containers/Content/GridCards";
-import { Search } from "lucide-react";
 import SearchLineContainer from "@/components/containers/Content/SearchLineContainer";
 import FilterCard from "@/components/containers/Content/FilterCard";
 
@@ -27,20 +26,10 @@ const BottomContent = ({ arrayLinks, nftsCards }: Props) => {
           }
         />
       </div>
-      <div className="my-6 flex gap-3 p-3 max-md:hidden">
+
+      <div className="my-6 flex flex-col gap-3 p-3 md:flex-row">
         {isFilterCardDisplayed && <FilterCard />}
         <GridCards arrayCards={nftsCards} />
-      </div>
-      <div className="md:hidden">
-        {isFilterCardDisplayed && (
-          <div className="^p-3 my-6">
-            <FilterCard />
-          </div>
-        )}
-
-        <div className="^p-3 my-6">
-          <GridCards arrayCards={nftsCards} />
-        </div>
       </div>
     </>
   );

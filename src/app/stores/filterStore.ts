@@ -11,8 +11,19 @@ type FilterValues = {
 interface FilterState {
   filters: FilterValues;
   updateFilters: (state: FilterValues) => void;
+  updateFilterSortContent: () => void;
+  filterPrice: string;
 }
 /** For Now it's unused because i'm in a rush but the idea was to share filters settings through the store */
+/**  */
+/** The idea behind this was to implement FilterSort with this
+ * a.sort((b, c) => (c > b ? 1 : -1)); for Low to High
+ * and
+ * a.sort((b, c) => (b > c ? 1 : -1)); for High to Low
+ *
+ * using callback function on the select of Filter
+ *
+ */
 export const useFilterStore = create<FilterState>()(
   devtools(
     persist(
@@ -30,6 +41,8 @@ export const useFilterStore = create<FilterState>()(
               marketplaces: state.filters.marketplaces,
             },
           })),
+        updateFilterSortContent: () => set(() => ({})),
+        filterPrice: "Low to High",
       }),
       {
         name: "filter-storage",

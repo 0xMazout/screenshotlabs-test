@@ -31,7 +31,7 @@ const MobileMenu = (props: Props) => {
       <DropdownMenuContent className="w-full">
         {/* <DropdownMenuLabel>Menu</DropdownMenuLabel> */}
         <DropdownMenuGroup className="flex">
-          <SearchBar placeholder="Search NFT, collections" />
+          <SearchBar placeholder="Search NFT, collections" itemType="text" />
           <ThemeSwitcher />
         </DropdownMenuGroup>
 

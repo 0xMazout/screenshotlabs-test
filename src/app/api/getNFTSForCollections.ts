@@ -7,6 +7,7 @@ export const fetchNFTsForCollection = async (
   const limitAttr = limit ? `&limit=${limit}` : ``;
 
   const startTokenAttr = startToken?.length ? `&startToken=${startToken}` : ``;
+  /**Alchemy API limits to 100 lines each call */
   try {
     const res = await fetch(
       `https://eth-mainnet.g.alchemy.com/nft/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}/getNFTsForCollection?contractAddress=${collectionContractAddress}&withMetadata=${withMetadata}${limitAttr}${startTokenAttr}`,

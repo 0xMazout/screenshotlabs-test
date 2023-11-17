@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
 
-import circleGreen from "@public/logo/circleGreen.svg";
-import leftTriangle from "@public/logo/leftTriangle.svg";
+/** Icons are white in production env, we would create two svg one dark and one light  */
+import circleGreen from "@public/icons/circleGreen.svg";
+import leftTriangle from "@public/icons/leftTriangle.svg";
+import DisplayGrid from "@public/icons/displayGrid.svg";
+import DisplayList from "@public/icons/displayList.svg";
 
 import SearchLine from "@/components/presentationals/Content/BottomContent/SearchLine";
-import DisplayGrid from "@public/logo/displayGrid.svg";
-import DisplayList from "@public/logo/displayList.svg";
 
 type Props = {
   setFilterCardDisplayed: () => void;

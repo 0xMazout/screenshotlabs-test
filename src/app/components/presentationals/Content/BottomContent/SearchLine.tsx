@@ -22,7 +22,7 @@ const SearchLine = ({
   setFilterCardDisplayed,
 }: Props) => {
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
       <Button
         className="text-dark align-center flex gap-1 bg-red-500 p-3 font-bold hover:bg-red-400 dark:bg-darkblue-500  dark:text-white dark:hover:bg-spaceblue-800"
         onClick={() => setFilterCardDisplayed()}
@@ -43,8 +43,9 @@ const SearchLine = ({
         <SearchBar
           isContent
           itemID="Content"
-          placeholder="Search for NFT"
+          placeholder="Search for NFT by ID number"
           key={"BottomContent"}
+          itemType="number"
         />
       </div>
       <div>
@@ -57,7 +58,12 @@ const SearchLine = ({
               className="text-dark hover:bg-red-300 data-[state=active]:bg-red-400 dark:text-white dark:hover:bg-darkblue-400 dark:data-[state=active]:bg-spaceblue-800"
               value={"DisplayList"}
             >
-              <Image src={displayList} alt={"display list icon"} width={20} />
+              <Image
+                src={displayList}
+                alt={"display list icon"}
+                width={20}
+                className="stroke-black"
+              />
             </TabsTrigger>
             <TabsTrigger
               className="text-dark hover:bg-red-300 data-[state=active]:bg-red-400 dark:text-white dark:hover:bg-darkblue-400 dark:data-[state=active]:bg-spaceblue-800"
