@@ -1,3 +1,5 @@
+You will find Q&A of part1 in /part1 folder and Explanation of code in /part2 folder
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
