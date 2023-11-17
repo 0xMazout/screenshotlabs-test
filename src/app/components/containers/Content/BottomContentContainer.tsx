@@ -7,7 +7,8 @@ import { fetchNFTsForCollection } from "@/api/getNFTSForCollections";
 import { GetNFTCollection, Nft } from "@/interfaces/IGetNFTCollectionsAPI";
 
 import { useSearchStore } from "@/stores/searchStore";
-import NFTCards from "../../presentationals/Content/BottomContent/NFTCards";
+import NFTCards from "@/components/presentationals/Content/BottomContent/NFTCards";
+import { useToast } from "@/components/ui/use-toast";
 type Props = {};
 
 /** Contain the Data for BottomContent Component:
@@ -21,6 +22,7 @@ const BottomContentContainer = (props: Props) => {
   const { isFetchAPINeeded } = useSearchStore();
   const { search, firstItemToQuery } = useSearchStore();
   const [cards, setCards] = useState<JSX.Element[]>([]);
+  const { toast } = useToast();
 
   useEffect(() => {
     const fetchCollection = async () => {
@@ -40,7 +42,14 @@ const BottomContentContainer = (props: Props) => {
           starterItem,
         );
         return res;
-      } catch (err) {}
+      } catch (err) {
+        toast({
+          title: "Error",
+          description: "Error while fetching API",
+          duration: 9000,
+        });
+        console.error(err);
+      }
     };
 
     /** Filter Collection from Search Value in Search Bar */
@@ -56,7 +65,12 @@ const BottomContentContainer = (props: Props) => {
 
         if (filtered) return creatingCards(filtered);
       } catch (error) {
-        console.log(error);
+        toast({
+          title: "Error",
+          description: "Error while Filtering Results",
+          duration: 9000,
+        });
+        console.error(error);
       }
     };
     /** Create Cards from filtered Nfts */
@@ -84,6 +98,7 @@ const BottomContentContainer = (props: Props) => {
       setCards(localCards);
     };
     filterFollowingSearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firstItemToQuery, isFetchAPINeeded, search]);
 
   /** Generate and Mock Navigation links*/
