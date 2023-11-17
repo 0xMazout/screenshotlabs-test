@@ -1,5 +1,9 @@
 This readme is used to explain some choices in the Screenshot Labs Frontend Test
 
+The Website is hosted on Vercel
+https://screenshotlabs-test.vercel.app/
+
+Explanations and Tradeoffs:
 About the Figma file:
 
 I had to take some choices :
@@ -57,3 +61,14 @@ I've made a simple pagination with a button to load the next 100 nfts.
 Launching 77 calls to the api to fetch all the nfts was not acceptable.
 
 Thanks for reading me and i hope you will enjoy my work.
+
+--
+
+The Website is hosted on Vercel
+https://screenshotlabs-test.vercel.app/
+
+But there is the problem Vercel doesn't want to load too much images from an external source. It required to pay for this with the Error Payment required
+
+OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED
+
+So some images are not loading but in local env it's working fine.
