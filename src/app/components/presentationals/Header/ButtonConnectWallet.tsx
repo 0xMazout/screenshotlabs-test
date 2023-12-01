@@ -31,7 +31,7 @@ const ButtonConnectWallet = () => {
             >
               {isConnected
                 ? reduceMiddleOfString(address ? address : "", 10)
-                : "Custom Connect"}
+                : "Connect Wallet"}
             </Button>
           );
         }}
