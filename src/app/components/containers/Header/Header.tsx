@@ -5,6 +5,7 @@ import ThemeSwitch from "@/components/presentationals/Header/ThemeSwitch";
 import SearchBar from "@/components/presentationals/globals/SearchBar";
 import { Button } from "@/components/ui/button";
 import { IArrayLinks } from "@/interfaces/IUIProps";
+import ButtonConnectWallet from "../../presentationals/Header/ButtonConnectWallet";
 // Split en 4 éléments.
 // Logo title , navigation, search bar, walletconnect+logo buy
 const Header = () => {
@@ -25,13 +26,7 @@ const Header = () => {
           placeholder="Search NFT, collections"
         />
         <div className=" flex items-center gap-1">
-          <Button
-            className="bg-red-500 font-bold hover:bg-red-400 dark:bg-darkblue-500 dark:hover:bg-spaceblue-800"
-            variant="outline"
-            size="sm"
-          >
-            Connect Wallet
-          </Button>
+          <ButtonConnectWallet />
           <ThemeSwitch
             className="bg-red-500 font-bold hover:bg-red-400 dark:bg-darkblue-500 dark:hover:bg-spaceblue-800"
             itemID="themeSwitcherHeader"

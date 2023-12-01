@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Provider from "@/components/containers/Provider";
 import { Toaster } from "@/components/ui/toaster";
+import { ConnectKitWrapper } from "./wagmi/connectKit";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Provider>{children}</Provider>
+        <ConnectKitWrapper>
+          <Provider>{children}</Provider>
+        </ConnectKitWrapper>
         <Toaster />
       </body>
     </html>

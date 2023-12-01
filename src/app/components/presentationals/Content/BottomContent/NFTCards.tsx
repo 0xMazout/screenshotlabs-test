@@ -24,7 +24,8 @@ const NFTCards = ({ image, name, price, isSelling }: Props) => {
           loop
         />
       ) : (
-        <Image
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
           className="rounded"
           src={image}
           alt={""}
