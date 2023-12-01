@@ -1,6 +1,7 @@
-You will find Q&A of part1 in /part1 folder and Explanation of code in /part2 folder
+This Project was to showcase Everai's NFTs. And to train my skills.
 
-To test in Local, create a .env.local with : 
+To test in Local, create a .env.local with :
+
 ```
 NEXT_PUBLIC_ALCHEMY_API_KEY='YourAPIKey'
 NEXT_PUBLIC_EVERAI_CONTRACT_ADDRESS='YourContractAddress'
